@@ -1,0 +1,46 @@
+<div class="helloFeaturePane">
+
+    <div class="helloHeader">
+        <h3 data-dojo-attach-point="titleNode"></h3>
+        <div class="helloLang">
+            <span data-dojo-attach-point="langLabelNode"></span>
+            <button type="button" data-dojo-attach-point="langEnNode" data-dojo-attach-event="onclick:_onLangEn"></button>
+            <button type="button" data-dojo-attach-point="langArNode" data-dojo-attach-event="onclick:_onLangAr"></button>
+        </div>
+    </div>
+
+    <div class="helloTwoPane">
+
+        <!-- first box (right side in Arabic): folders and documents -->
+        <div class="helloBox helloBrowserBox">
+            <h4 data-dojo-attach-point="browserTitleNode"></h4>
+            <div class="helloFeatureToolbar">
+                <label>
+                    <span data-dojo-attach-point="pathLabelNode"></span>
+                    <input type="text" dir="ltr" value="/" data-dojo-attach-point="pathNode" />
+                </label>
+                <button type="button" data-dojo-attach-point="loadBtnNode" data-dojo-attach-event="onclick:_onLoadClick"></button>
+                <button type="button" data-dojo-attach-point="upBtnNode" data-dojo-attach-event="onclick:_onUpClick"></button>
+            </div>
+            <p class="helloFeatureStatus" data-dojo-attach-point="statusNode"></p>
+            <table class="helloDocsTable">
+                <thead>
+                    <tr>
+                        <th data-dojo-attach-point="thTypeNode"></th>
+                        <th data-dojo-attach-point="thNameNode"></th>
+                        <th data-dojo-attach-point="thPathIdNode"></th>
+                    </tr>
+                </thead>
+                <tbody data-dojo-attach-point="listBodyNode"></tbody>
+            </table>
+        </div>
+
+        <!-- second box (left side in Arabic): properties of the selected document -->
+        <div class="helloBox helloPropsBox">
+            <h4 data-dojo-attach-point="propsTitleNode"></h4>
+            <p class="helloFeatureStatus" data-dojo-attach-point="propsMsgNode"></p>
+            <div data-dojo-attach-point="propsBodyNode"></div>
+        </div>
+
+    </div>
+</div>

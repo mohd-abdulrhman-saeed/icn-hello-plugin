@@ -1,0 +1,65 @@
+/* Hello Plugin 2.0.0 - the file name carries the version so the browser cache cannot serve an old copy */
+
+/* Side-bar icon of the feature (HelloFeature.getIconUrl) */
+.HelloFeatureIcon {
+    width: 32px;
+    height: 32px;
+    background: no-repeat center / 24px 24px url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><circle cx='12' cy='12' r='10' fill='%230f62fe'/><text x='12' y='16' font-size='12' text-anchor='middle' fill='white'>H</text></svg>");
+}
+
+/* Feature page */
+.helloFeaturePane { padding: 12px; }
+
+.helloHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+.helloHeader h3 { margin: 0; }
+.helloLang button { margin-inline-start: 6px; cursor: pointer; }
+.helloLangActive { font-weight: 700; background: #d0e2ff; }
+
+/* Two boxes side by side. The grid follows the page direction:
+   in Arabic (rtl) the first box is on the right, in English (ltr) on the left. */
+.helloTwoPane {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 16px;
+    align-items: start;
+}
+.helloBox {
+    border: 1px solid #c6c6c6;
+    padding: 12px;
+    min-height: 240px;
+    overflow: auto;
+}
+.helloBox h4 { margin: 0 0 8px 0; }
+
+.helloFeatureToolbar { margin: 8px 0; }
+.helloFeatureToolbar input { margin-inline: 8px; min-width: 260px; }
+.helloFeatureToolbar button { margin-inline-end: 4px; }
+.helloFeatureStatus { color: #525252; font-size: 12px; }
+
+/* Tables */
+.helloDocsTable, .helloPropsTable { border-collapse: collapse; width: 100%; }
+.helloDocsTable th, .helloDocsTable td,
+.helloPropsTable th, .helloPropsTable td {
+    border: 1px solid #c6c6c6;
+    padding: 6px 10px;
+    text-align: start;
+}
+.helloDocsTable th, .helloPropsTable th { background: #e5e5e5; }
+.helloPropsTable th { width: 35%; }
+
+.helloFolderRow { cursor: pointer; font-weight: 600; }
+.helloFolderRow:hover, .helloDocRow:hover { background: #e8f0fe; }
+.helloDocRow { cursor: pointer; }
+.helloDocRow.helloRowSelected, .helloDocRow.helloRowSelected:hover { background: #d0e2ff; }
+
+.helloPaneFooter { margin-top: 8px; color: #525252; font-size: 12px; }
+
+/* Narrow screens: boxes stacked */
+@media (max-width: 900px) {
+    .helloTwoPane { grid-template-columns: minmax(0, 1fr); }
+}
